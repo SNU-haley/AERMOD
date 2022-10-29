@@ -1,0 +1,22 @@
+!! EX_Params.txt - parameter input file for AERGRID
+!! See AERGRID_README.txt for additional details
+
+!! CENTER_PT  EASTING(m)    NORTHING(m)   UTM_Zone **Mandatory**
+PT            514600.0       4953700.0     12
+
+!! POINT-SOURCE  EASTING(m)  NORTHING(m) **Optional**
+SO STACK1         514607.1   4953715.8
+SO STACK2         514612.2   4953645.3
+
+!! Property Line file in bln format **Mandatory**
+!! Enter 'NONE' to include onsite receptors
+PL    EX_prop_line.txt
+
+!! GRID SECTION **Mandatory**
+!! Gridname (max of 8 characters) start with 'P' = Property line or 'G' = Grid
+!! Type 'A' = Property Line and Type 'B' = Grid
+!! GRIDNAME   TYPE  SPACING(m) WIDTH(m) LENGTH(m) EASTING(m)  NORTHING(m)
+RE PLINE        A      10.
+RE GRID1        B      50.         500.   500.    515740.0   4956520.0
+RE GRID2        B      100.        2000.  3000.   514600.0   4953700.0
+RE GRID3        B      250.        4000.  8000.   514600.0   4953700.0
